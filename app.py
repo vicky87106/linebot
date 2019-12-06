@@ -35,13 +35,21 @@ machine = TocMachine(
     show_conditions=True,
 )
 
+{
+    "message":{"id":"訊息識別碼","packageId":"1","stickerid":"1","type":"sticker"},
+    "replytoken":"回覆令牌代碼",
+    "source":{"type":"user","userId":"使用者唯一識別碼"},
+    "timestamp":時間戳記,
+    "type":"message"
+}
+
 app = Flask(__name__, static_url_path="")
 
 
 # get channel_secret and channel_access_token from your environment variable
 channel_secret = os.getenv("LINE_CHANNEL_SECRET", None)
 channel_access_token = os.getenv("LINE_CHANNEL_ACCESS_TOKEN", None)
-handler = WebhookHandler(channel_secret)
+
 if channel_secret is None:
     print("Specify LINE_CHANNEL_SECRET as environment variable.")
     sys.exit(1)
@@ -51,7 +59,7 @@ if channel_access_token is None:
 
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
-
+handler = WebhookHandler(channel_secret)
 
 @app.route("/callback", methods=["POST"]) #接收POST方法請求
 def callback():
