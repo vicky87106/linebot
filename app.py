@@ -3,9 +3,9 @@ import sys
 
 from flask import Flask, jsonify, request, abort, send_file
 from dotenv import load_dotenv
-from linebot import LineBotApi, WebhookParser
+from linebot import LineBotApi, WebhookParser,WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage,StickerMessage,StickerSendMessage
 
 from fsm import TocMachine
 from utils import send_text_message
@@ -41,6 +41,7 @@ app = Flask(__name__, static_url_path="")
 # get channel_secret and channel_access_token from your environment variable
 channel_secret = os.getenv("LINE_CHANNEL_SECRET", None)
 channel_access_token = os.getenv("LINE_CHANNEL_ACCESS_TOKEN", None)
+handler = WebhookHandler(channel_secret)
 if channel_secret is None:
     print("Specify LINE_CHANNEL_SECRET as environment variable.")
     sys.exit(1)
@@ -52,11 +53,11 @@ line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
 
-@app.route("/callback", methods=["POST"])
+@app.route("/callback", methods=["POST"]) #接收POST方法請求
 def callback():
-    signature = request.headers["X-Line-Signature"]
+    signature = request.headers["X-Line-Signature"] #取得HTTP標頭的密鑰欄位
     # get request body as text
-    body = request.get_data(as_text=True)
+    body = request.get_data(as_text=True) #取得HTTP訊息本體並轉成文字格式
     app.logger.info("Request body: " + body)
 
     # parse webhook body
@@ -118,3 +119,17 @@ def show_fsm():
 if __name__ == "__main__":
     port = os.environ.get("PORT", 8000)
     app.run(host="0.0.0.0", port=port, debug=True)
+
+@handler.default()
+
+#接收貼圖事件並回覆相同貼圖
+@handler.add(MessageEvent,message=StickerMessage)
+def handle_sticker_message(event):
+    pid=event.message.package_id #收到的貼圖包編號
+    sid=event.message.sticker#貼圖編號
+    line_bot_api.reply_message(
+        event.reply_token,
+        StickerSendMessage(package_id=pid,sticker_id=sid)
+    )
+
+
