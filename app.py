@@ -39,7 +39,7 @@ machine = TocMachine(
     "message":{"id":"訊息識別碼","packageId":"1","stickerid":"1","type":"sticker"},
     "replytoken":"回覆令牌代碼",
     "source":{"type":"user","userId":"使用者唯一識別碼"},
-    "timestamp":時間戳記,
+    "timestamp":"時間戳記",
     "type":"message"
 }
 
