@@ -123,16 +123,4 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port, debug=True)
 
 
-@handler.default()
-
-#接收貼圖事件並回覆相同貼圖
-@handler.add(MessageEvent,message=StickerMessage)
-def handle_sticker_message(event):
-    pid=event.message.package_id #收到的貼圖包編號
-    sid=event.message.sticker#貼圖編號
-    line_bot_api.reply_message(
-        event.reply_token,
-        StickerSendMessage(package_id=pid,sticker_id=sid)
-    )
-
 

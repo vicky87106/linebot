@@ -14,7 +14,7 @@ class TocMachine(GraphMachine):
     def on_enter_choose(self, event):
         print("I'm entering choose")
         reply_token = event.reply_token
-        send_text_message(reply_token, "吃長榮路嗎?")
+        send_text_message(reply_token, "要吃長榮路的嗎? y/n?")
 
     def is_going_to_happy(self, event): #吃長榮路
             text = event.message.text
@@ -23,7 +23,7 @@ class TocMachine(GraphMachine):
     def on_enter_happy(self, event):
         print("I'm entering happy")
         reply_token = event.reply_token
-        send_text_message(reply_token, "今天開心嗎?")
+        send_text_message(reply_token, "你今天開心嗎? y/n?")
     
     def is_going_to_dance(self, event): #不開心
             text = event.message.text
@@ -32,7 +32,7 @@ class TocMachine(GraphMachine):
     def on_enter_dance(self,event):
         print("I'm entering dance")
         reply_token = event.reply_token
-        send_text_message(reply_token, "舞春")
+        send_text_message(reply_token, "那去舞春好好吃一波吧!!對面甜點聽說不錯~")
         self.go_back() #回到user 
     
     def is_going_to_box(self, event): #開心
@@ -51,7 +51,7 @@ class TocMachine(GraphMachine):
     def on_enter_eye(self,event):
         print("I'm entering eye")
         reply_token = event.reply_token
-        send_text_message(reply_token, "目白")
+        send_text_message(reply_token, "那就吃目白吧!有機會遇到認識的人喔!")
         self.go_back() #回到user 
     
     def is_going_to_earn(self, event): #不吃便當
@@ -61,7 +61,7 @@ class TocMachine(GraphMachine):
     def on_enter_earn(self,event):
         print("I'm entering earn")
         reply_token = event.reply_token
-        send_text_message(reply_token, "饌前")
+        send_text_message(reply_token, "吃吃吃...饌前!肉羹還不錯")
         self.go_back() #回到user 
     
     def is_going_to_rice(self, event): #不吃長榮路
@@ -71,7 +71,7 @@ class TocMachine(GraphMachine):
     def on_enter_rice(self, event):
         print("I'm entering rice")
         reply_token = event.reply_token
-        send_text_message(reply_token, "吃飯嗎?")
+        send_text_message(reply_token, "想吃飯類的嗎? y/n?")
     
     def is_going_to_chicken(self, event): #要吃飯
         text = event.message.text
@@ -80,7 +80,7 @@ class TocMachine(GraphMachine):
     def on_enter_chicken(self,event):
         print("I'm entering chicken")
         reply_token = event.reply_token
-        send_text_message(reply_token, "施家火雞肉飯")
+        send_text_message(reply_token, "施家火雞肉飯~傍晚還有麻糬可以買~~超好吃!!")
         self.go_back() #chicken回到user   
 
     def is_going_to_dumpling(self, event): #不要吃飯
@@ -90,7 +90,7 @@ class TocMachine(GraphMachine):
     def on_enter_dumpling(self, event):
         print("I'm entering dumpling")
         reply_token = event.reply_token
-        send_text_message(reply_token, "吃水餃嗎?") 
+        send_text_message(reply_token, "想吃餃子嗎?") 
 
     def is_going_to_eight_cloud(self, event): #要吃水餃
         text = event.message.text
@@ -99,7 +99,7 @@ class TocMachine(GraphMachine):
     def on_enter_eight_cloud(self,event):
         print("I'm entering eight_cloud")
         reply_token = event.reply_token
-        send_text_message(reply_token, "八方雲集")
+        send_text_message(reply_token, "吃八方雲集吧")
         self.go_back() #回到user   
     
     def is_going_to_braised(self, event): #不要吃水餃
@@ -109,7 +109,7 @@ class TocMachine(GraphMachine):
     def on_enter_braised(self,event):
         print("I'm entering braised")
         reply_token = event.reply_token
-        send_text_message(reply_token, "食神滷味")
+        send_text_message(reply_token, "食神滷味...愛店!! 但晚上才開")
         self.go_back() #回到user  
 
     def on_exit_chicken(self):
