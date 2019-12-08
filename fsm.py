@@ -14,6 +14,11 @@ class TocMachine(GraphMachine):
     def is_going_to_rice(self, event):
         text = event.message.text
         return text.lower() == "n"
+    
+    def is_going_to_chicken(self, event):
+        text = event.message.text
+        return text.lower() == "y"
+
 
    
 
@@ -39,11 +44,14 @@ class TocMachine(GraphMachine):
     def on_enter_rice(self, event):
         print("I'm entering rice")
         reply_token = event.reply_token
-        send_text_message(reply_token, "施家火雞肉飯")
-        self.advance() #rice到chicken
+        send_text_message(reply_token, "吃飯嗎?")
+        
       
     
     def on_enter_chicken(self):
+        print("I'm entering chicken")
+        reply_token = event.reply_token
+        send_text_message(reply_token, "施家火雞肉飯")
         self.go_back() #chicken回到user   
     
     def on_exit_chicken(self):
@@ -53,5 +61,6 @@ class TocMachine(GraphMachine):
     def on_exit_rice(self):
         print("Leaving rice")
    
-    
+    def on_exit_choose(self):
+        print("Leaving choose")
 
