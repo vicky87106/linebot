@@ -13,7 +13,7 @@ class TocMachine(GraphMachine):
 
     def is_going_to_rice(self, event):
         text = event.message.text
-        return (text.lower() == "y" )|(text.lower() == "n") 
+        return text.lower() == "y" 
 
     def on_enter_state1(self, event): #on_enter + state名稱
         print("I'm entering state1")
@@ -28,12 +28,9 @@ class TocMachine(GraphMachine):
     def on_enter_rice(self, event):
         print("I'm entering rice")
         reply_token = event.reply_token
-        if (reply_token == "y"):
-            send_text_message(reply_token, "施家火雞肉飯")
-            self.go_back()
-        elif (reply_token == "n"):
-            send_text_message(reply_token, "黑工號")
-            self.go_back()
+        send_text_message(reply_token, "施家火雞肉飯")
+        self.go_back()
+        
 
     def on_exit_rice(self):
         print("Leaving rice")
