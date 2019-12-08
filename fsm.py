@@ -62,7 +62,7 @@ class TocMachine(GraphMachine):
         print("Leaving chicken")
 
 
-    def on_exit_rice(self):
+    def on_exit_rice(self,event):
         print("Leaving rice")
    
     def on_exit_choose(self,event):
