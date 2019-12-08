@@ -42,7 +42,7 @@ class TocMachine(GraphMachine):
         print("I'm entering choose")
         reply_token = event.reply_token
         send_text_message(reply_token, "吃長榮路嗎?")
-        self.advance()
+        
 
     def on_enter_rice(self, event):
         print("I'm entering rice")
