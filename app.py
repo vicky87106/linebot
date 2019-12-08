@@ -17,7 +17,7 @@ machine = TocMachine(
     states=["user", "state1", "rice"],
     transitions=[#狀態
         { "trigger": "advance",  "source": "user", "dest": "state1",  "conditions": "is_going_to_state1",},
-        { "trigger": "advance",  "source": "user", "dest": "rice",   "conditions":"n_CR_road",},
+        { "trigger": "advance",  "source": "user", "dest": "rice",   "conditions":"is_going_to_rice",},
         {"trigger": "go_back", "source": ["state1", "rice"], "dest": "user"},
     ],
     initial="user",
