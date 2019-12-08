@@ -28,10 +28,10 @@ class TocMachine(GraphMachine):
     def on_enter_rice(self, event):
         print("I'm entering rice")
         reply_token = event.reply_token
-        if reply_token == "y"
+        if (reply_token == "y"):
             send_text_message(reply_token, "施家火雞肉飯")
             self.go_back()
-        else if reply_token == "n"
+        elif (reply_token == "n"):
             send_text_message(reply_token, "黑工號")
             self.go_back()
 
