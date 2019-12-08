@@ -33,6 +33,7 @@ class TocMachine(GraphMachine):
         reply_token = event.reply_token
         send_text_message(reply_token, "施家火雞肉飯")
         self.advance() #rice到chicken
+        self.go_back()    
     
     def on_enter_chicken(self, event):
         self.go_back()    
