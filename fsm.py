@@ -15,9 +15,7 @@ class TocMachine(GraphMachine):
         text = event.message.text
         return text.lower() == "y"
 
-    def is_going_to_chicken(self, event):
-        return (1==1)
-    
+   
 
 
     def on_enter_state1(self, event): #on_enter + state名稱
@@ -25,7 +23,7 @@ class TocMachine(GraphMachine):
 
         reply_token = event.reply_token
         send_text_message(reply_token, "Trigger state1")
-        self.go_back()
+        self.go_back() #從state1回到user
 
     def on_exit_state1(self):
         print("Leaving state1")
@@ -34,17 +32,10 @@ class TocMachine(GraphMachine):
         print("I'm entering rice")
         reply_token = event.reply_token
         send_text_message(reply_token, "施家火雞肉飯")
-        self.advance()
         self.go_back()
         
     def on_exit_rice(self):
         print("Leaving rice")
-    
-    def on_enter_chicken(self, event): #on_enter + state名稱
-        print("I'm entering chicken")
-        self.go_back()
-    
-    def on_exit_chicken(self):
-        print("Leaving chicken")
+   
     
 
