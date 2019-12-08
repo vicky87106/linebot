@@ -12,8 +12,9 @@ class TocMachine(GraphMachine):
         return text.lower() == "go to state1"
 
     def is_going_to_rice(self, event):
-        text = event.message.text
-        return text.lower() == "n"
+        if event.get("advance"):
+            text = event.message.text
+            return text.lower() == "n"
     
     def is_going_to_chicken(self, event):
         text = event.message.text
@@ -42,6 +43,7 @@ class TocMachine(GraphMachine):
         print("I'm entering choose")
         reply_token = event.reply_token
         send_text_message(reply_token, "吃長榮路嗎?")
+       
         
 
     def on_enter_rice(self, event):
