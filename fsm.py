@@ -19,8 +19,51 @@ class TocMachine(GraphMachine):
     def is_going_to_happy(self, event): #吃長榮路
             text = event.message.text
             return text.lower() == "y"
- 
- 
+    
+    def on_enter_happy(self, event):
+        print("I'm entering happy")
+        reply_token = event.reply_token
+        send_text_message(reply_token, "今天開心嗎?")
+    
+    def is_going_to_dance(self, event): #不開心
+            text = event.message.text
+            return text.lower() == "n"
+
+    def on_enter_dance(self,event):
+        print("I'm entering dance")
+        reply_token = event.reply_token
+        send_text_message(reply_token, "舞春")
+        self.go_back() #回到user 
+    
+    def is_going_to_box(self, event): #開心
+            text = event.message.text
+            return text.lower() == "y"
+    
+    def on_enter_box(self, event):
+        print("I'm entering box")
+        reply_token = event.reply_token
+        send_text_message(reply_token, "想吃便當類的嗎?")
+    
+    def is_going_to_eye(self, event): #吃便當
+            text = event.message.text
+            return text.lower() == "y"
+    
+    def on_enter_eye(self,event):
+        print("I'm entering eye")
+        reply_token = event.reply_token
+        send_text_message(reply_token, "目白")
+        self.go_back() #回到user 
+    
+    def is_going_to_earn(self, event): #不吃便當
+            text = event.message.text
+            return text.lower() == "n"
+    
+    def on_enter_earn(self,event):
+        print("I'm entering earn")
+        reply_token = event.reply_token
+        send_text_message(reply_token, "饌前")
+        self.go_back() #回到user 
+    
     def is_going_to_rice(self, event): #不吃長榮路
             text = event.message.text
             return text.lower() == "n"

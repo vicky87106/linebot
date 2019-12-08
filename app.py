@@ -27,7 +27,7 @@ machine = TocMachine(
         { "trigger": "advance",  "source": "rice", "dest": "dumpling", "conditions":"is_going_to_dumpling", },
         { "trigger": "advance",  "source": "dumpling", "dest": "eight_cloud", "conditions":"is_going_to_eight_cloud", },
         { "trigger": "advance",  "source": "dumpling", "dest": "braised", "conditions":"is_going_to_braised", },
-        {"trigger": "go_back", "source": ["state1", "chicken","eight_cloud","braised"], "dest": "user"},
+        {"trigger": "go_back", "source": ["state1", "chicken","eight_cloud","braised","dance","eye","earn"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
