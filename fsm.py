@@ -34,7 +34,7 @@ class TocMachine(GraphMachine):
         print("I'm entering rice")
         reply_token = event.reply_token
         send_text_message(reply_token, "施家火雞肉飯")
-        self.advance()
+        #self.advance()
         
     def on_exit_rice(self):
         print("Leaving rice")
