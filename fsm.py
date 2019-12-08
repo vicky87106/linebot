@@ -31,7 +31,7 @@ class TocMachine(GraphMachine):
         if reply_token == "y"
             send_text_message(reply_token, "施家火雞肉飯")
             self.go_back()
-        else if reply_token == "y"
+        else if reply_token == "n"
             send_text_message(reply_token, "黑工號")
             self.go_back()
 
