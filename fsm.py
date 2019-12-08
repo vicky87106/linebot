@@ -15,7 +15,7 @@ class TocMachine(GraphMachine):
         text = event.message.text
         return text.lower() == "y"
 
-    def is_going_to_rice(self, event):
+    def is_going_to_chicken(self, event):
         return (1==1)
     
 
