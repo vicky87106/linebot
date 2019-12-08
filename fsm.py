@@ -52,7 +52,7 @@ class TocMachine(GraphMachine):
         
       
     
-    def on_enter_chicken(self):
+    def on_enter_chicken(self,event):
         print("I'm entering chicken")
         reply_token = event.reply_token
         send_text_message(reply_token, "施家火雞肉飯")
