@@ -13,7 +13,7 @@ class TocMachine(GraphMachine):
 
     def is_going_to_rice(self, event):
         text = event.message.text
-        return text.lower() == "y" || text.lower() == "n"
+        return (text.lower() == "y" )|(text.lower() == "n") 
 
     def on_enter_state1(self, event): #on_enter + state名稱
         print("I'm entering state1")
