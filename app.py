@@ -14,11 +14,12 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "rice"],
+    states=["user", "state1", "rice","chicken"],
     transitions=[#狀態
         { "trigger": "advance",  "source": "user", "dest": "state1",  "conditions": "is_going_to_state1",},
         { "trigger": "advance",  "source": "user", "dest": "rice",   "conditions":"is_going_to_rice",},
-        {"trigger": "go_back", "source": ["state1", "rice"], "dest": "user"},
+        { "trigger": "advance",  "source": "rice", "dest": "chicken",   "conditions":"is_going_to_chicken",},
+        {"trigger": "go_back", "source": ["state1", "chicken"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
