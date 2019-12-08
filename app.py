@@ -14,9 +14,13 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "choose","rice","chicken","dumpling","eight_cloud","braised"],
+    states=["user", "choose","rice","chicken","dumpling","eight_cloud","braised","happy","box","eye","earn","dance"],
     transitions=[#狀態
-        { "trigger": "advance",  "source": "user", "dest": "state1",  "conditions": "is_going_to_state1",},
+        { "trigger": "advance",  "source": "choose", "dest": "happy",  "conditions": "is_going_to_happy",},
+        { "trigger": "advance",  "source": "happy", "dest": "dance",  "conditions": "is_going_to_dance",},
+        { "trigger": "advance",  "source": "happy", "dest": "box",  "conditions": "is_going_to_box",},
+        { "trigger": "advance",  "source": "box", "dest": "eye",  "conditions": "is_going_to_eye",},
+        { "trigger": "advance",  "source": "box", "dest": "earn",  "conditions": "is_going_to_earn",},
         { "trigger": "advance",  "source": "user", "dest": "choose",  "conditions": "is_going_to_choose",},
         { "trigger": "advance",  "source": "choose", "dest": "rice",   "conditions":"is_going_to_rice",},
         { "trigger": "advance",  "source": "rice", "dest": "chicken", "conditions":"is_going_to_chicken", },
