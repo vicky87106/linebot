@@ -76,8 +76,8 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 				      * Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯" (回到 user state)
 			    
 	    * Input: "n"
-	          * State: rice
-		  * Reply: "想吃飯類的嗎? y/n?"
+	         * State: rice
+		 * Reply: "想吃飯類的嗎? y/n?"
 		       * Input: "y"
 		            * State: chicken
 			    * Reply: "施家火雞肉飯~傍晚還有麻糬可以買  超好吃!!" (回到 user state)
