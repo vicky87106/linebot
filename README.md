@@ -66,22 +66,22 @@ python app.py
 				* Input: "y"
 				* State: eye
 				* Reply: "那就吃目白吧!有機會遇到認識的人喔!XD" (回到 user state)
-				 	* Input: "n"
-				      	* State: earn
-				      	* Reply: "吃吃吃...饌前!肉羹還不錯" (回到 user state)
+				* Input: "n"
+			      	* State: earn
+			      	* Reply: "吃吃吃...饌前!肉羹還不錯" (回到 user state)
 			* Input: "n"
 			* State: dance
 			* Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯" (回到 user state)
 			    
-	 	* Input: "n"
-	    	* State: rice
-	    	* Reply: "想吃飯類的嗎? y/n? "
+		* Input: "n"
+		* State: rice"
+		* Reply: "想吃飯類的嗎? y/n? "
 	         
 			* Input: "y"
 			* State: chicken   
 			* Reply: "施家火雞肉飯~傍晚還有麻糬可以買  超好吃!!" (回到 user state)
-		        * Input: "n"
-		     	* State: dumpling
+			* Input: "n"
+			* State: dumpling
 			* Reply: "想吃餃子嗎? y/n?"
 				* Input: "y"
 			     	* State: eight_cloud    
