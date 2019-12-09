@@ -65,7 +65,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 				  * Input: "n"
 				       * State: eye
 				       * Reply: "那就吃目白吧!有機會遇到認識的人喔!XD" (回到 user state)
-		         * Input:"n"
+		         * Input: "n"
 			      * State: dance
 			      * Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯" (回到 user state)
 	    * Input: "n"
