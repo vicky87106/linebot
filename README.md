@@ -53,7 +53,7 @@ python app.py
 打"eat"啟動這個linebot，它會經由一連串的問題，建議一家餐廳給你，之後回到`user`
 
 
-* user
+* 一開始`user` state
 	* Input: "eat"
 	* State: choose
 	* Reply: 要吃長榮路的嗎? y/n?"
@@ -66,6 +66,7 @@ python app.py
 				* Input: "y"
 				* State: eye
 				* Reply: "那就吃目白吧!有機會遇到認識的人喔!XD" (回到 user state)
+				
 				* Input: "n"
 				* State: earn
 				* Reply: "吃吃吃...饌前!肉羹還不錯" (回到 user state)
@@ -85,7 +86,8 @@ python app.py
 			* Reply: "想吃餃子嗎? y/n?"
 				* Input: "y"
 				* State: eight_cloud    
-				* Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯" (回到 user state)   
+				* Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯" (回到 user state)  
+				
 				* Input: "n"     
 				* State: braised         
 				* Reply: "食神滷味...愛店!! 但晚上才開..人多會等有點久!" (回到 user state)
