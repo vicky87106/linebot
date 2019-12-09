@@ -82,7 +82,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 		       * Input: "y"
 		            * State: chicken
 			    * Reply: "施家火雞肉飯~傍晚還有麻糬可以買  超好吃!!" (回到 user state)
-		       * Input: "n"
+		        * Input: "n"
 		            * State: dumpling
 			    * Reply: "想吃餃子嗎? y/n?"
 			         * Input: "y"
