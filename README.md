@@ -2,8 +2,8 @@
 
 A Line bot based on a finite state machine
 
-題目：選擇障礙吃甚麼小幫手
-前言：因為大學生最大的煩惱常是下一餐吃甚麼，通常一群人總是會互相推託這件事，而這個linebot，蒐集學校附近常吃的餐廳，當你不知道要吃甚麼的時候，
+* 題目：選擇障礙吃甚麼小幫手
+* 前言：因為大學生最大的煩惱常是下一餐吃甚麼，通常一群人總是會互相推託這件事，而這個linebot，蒐集學校附近常吃的餐廳，當你不知道要吃甚麼的時候，
 問問它就對了!
 ## Setup
 
@@ -47,9 +47,9 @@ python app.py
 ![fsm](./img/show-fsm.png)
 
 ## Usage
-The initial state is set to `user`.
+初始狀態：`user`
+打"eat"啟動這個linebot，它會經由一連串的問題，建議一家餐廳給你，之後回到`user`
 
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
 
 * user
 	* Input: "eat"
