@@ -37,7 +37,7 @@ Otherwise, you might not be able to run your code.
 #### Run the sever
 
 ```sh
-python3 app.py
+python app.py
 ```
 
 
