@@ -89,8 +89,8 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 				      * State: eight_cloud
 				      * Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯" (回到 user state)
 				 * Input: "n"
-				      * State: braised
-				      * Reply: "食神滷味...愛店!! 但晚上才開..人多會等有點久!" (回到 user state)
+				      * State: dance
+				      * Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯" (回到 user state)
 			    
 
 ## Deploy
