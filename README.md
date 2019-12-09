@@ -22,14 +22,14 @@ pip install -r requirements.txt
 
 * pygraphviz (For visualizing Finite State Machine)
     * [Setup pygraphviz on Windows]
-      Steps:
+      
+Steps:
 1. Download graphviz-2.38.msi from https://graphviz.gitlab.io/_pages/Download/Download_windows.html and install
-2. Download the version of python you need from https://github.com/CristiFati/Prebuilt-Binaries/tree/master/PyGraphviz/v1.5/Graphviz-2.42.2
-3. Navigate to the directory that you downloaded the wheel file to
-4. Run pip install pygraphviz-1.3.1-cp27-none-win_amd64.whl
-5. Rejoice
-	
+2. Download the version of python you need from 
+    https://github.com/CristiFati/Prebuilt-Binaries/tree/master/PyGraphviz/v1.5/Graphviz-2.42.2
+3. Run `pip install pygraphviz-1.3.1-cp27-none-win_amd64.whl`
 
+	
 
 #### Secret Data
 You should generate a `.env` file to set Environment Variables refer to our `.env.sample`.
@@ -155,4 +155,5 @@ Setting to deploy webhooks on Heroku.
 Flask Architecture ❤️ [@Sirius207](https://github.com/Sirius207)
 
 [Line line-bot-sdk-python](https://github.com/line/line-bot-sdk-python/tree/master/examples/flask-echo)
+
 [Setup pygraphviz on Windows]https://stackoverflow.com/questions/40809758/howto-install-pygraphviz-on-windows-10-64bit/42059133?fbclid=IwAR3t8ZuzDLIous-i26_gYWEv2Wz-T1RgO2ykTKk7PvmxVvwt-GJ5NnhIj9c
