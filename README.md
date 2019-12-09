@@ -2,8 +2,9 @@
 
 A Line bot based on a finite state machine
 
-* 題目：選擇障礙吃甚麼小幫手
-* 前言：因為大學生最大的煩惱常是下一餐吃甚麼，通常一群人總是會互相推託這件事，而這個linebot，蒐集學校附近常吃的餐廳，當你不知道要吃甚麼的時候，
+ 題目：選擇障礙吃甚麼小幫手
+
+ 前言：因為大學生最大的煩惱常是下一餐吃甚麼，通常一群人總是會互相推託這件事，而這個linebot，蒐集學校附近常吃的餐廳，當你不知道要吃甚麼的時候，
 問問它就對了!
 ## Setup
 
@@ -148,6 +149,7 @@ Setting to deploy webhooks on Heroku.
 [Pipenv](https://medium.com/@chihsuan/pipenv-更簡單-更快速的-python-套件管理工具-135a47e504f4) ❤️ [@chihsuan](https://github.com/chihsuan)
 
 [TOC-Project-2019](https://github.com/winonecheng/TOC-Project-2019) ❤️ [@winonecheng](https://github.com/winonecheng)
+
 [TOCproject2020](https://github.com/NCKU-CCS/TOC-Project-2020)
 Flask Architecture ❤️ [@Sirius207](https://github.com/Sirius207)
 
