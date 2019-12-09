@@ -96,7 +96,7 @@ Setting to deploy webhooks on Heroku.
 
 ### Heroku CLI installation
 
-* [macOS, Windows](https://devcenter.heroku.com/articles/heroku-cli)
+* [Windows](https://devcenter.heroku.com/articles/heroku-cli)
 
 
 ### Connect to Heroku
@@ -113,7 +113,7 @@ Setting to deploy webhooks on Heroku.
 
 1. Add local project to Heroku project
 
-	heroku git:remote -a {HEROKU_APP_NAME}
+	`heroku git:remote -a {HEROKU_APP_NAME}`
 
 2. Upload project
 
@@ -144,7 +144,7 @@ Setting to deploy webhooks on Heroku.
 	heroku buildpacks:add --index 1 heroku-community/apt
 	```
 
-	refference: https://hackmd.io/@ccw/B1Xw7E8kN?type=view#Q2-如何在-Heroku-使用-pygraphviz
+	reference: https://hackmd.io/@ccw/B1Xw7E8kN?type=view#Q2-如何在-Heroku-使用-pygraphviz
 
 ## Reference
 [Pipenv](https://medium.com/@chihsuan/pipenv-更簡單-更快速的-python-套件管理工具-135a47e504f4) ❤️ [@chihsuan](https://github.com/chihsuan)
