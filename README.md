@@ -1,8 +1,10 @@
 # 計算理論 Project 2019    
 
-
 A Line bot based on a finite state machine
 
+題目：選擇障礙吃甚麼小幫手
+前言：因為大學生最大的煩惱常是下一餐吃甚麼，通常一群人總是會互相推託這件事，而這個linebot，蒐集學校附近常吃的餐廳，當你不知道要吃甚麼的時候，
+問問它就對了!
 ## Setup
 
 ### Prerequisite
