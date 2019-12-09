@@ -60,10 +60,10 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 			      * State: box
 			      * Reply: "想吃便當類的嗎? y/n?" 
 			          * Input: "y"
-				      * State:earn
+				      * State: earn
 				      * Reply: "吃吃吃...饌前!肉羹還不錯" (回到 user state)
 				  * Input: "n"
-				       * State:eye
+				       * State: eye
 				       * Reply: "那就吃目白吧!有機會遇到認識的人喔!XD" (回到 user state)
 		         * Input:"n"
 			      * State: dance
