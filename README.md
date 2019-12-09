@@ -57,15 +57,15 @@ python app.py
 	* Input: "eat"
 	* State: choose
 	* Reply: 要吃長榮路的嗎? y/n?"
-       		* Input: "y"
-        	* State: happy
+   		* Input: "y"
+   		* State: happy
 		* Reply: "你今天開心嗎? y/n?"
-		       	* Input: "y"
-		        * State: box
+			* Input: "y"
+		     	* State: box
 			* Reply: "想吃便當類的嗎? y/n?
-			         * Input: "y"
-				 * State: eye
-				 * Reply: "那就吃目白吧!有機會遇到認識的人喔!XD" (回到 user state)
+				* Input: "y"
+				* State: eye
+				* Reply: "那就吃目白吧!有機會遇到認識的人喔!XD" (回到 user state)
 				 	* Input: "n"
 				      	* State: earn
 				      	* Reply: "吃吃吃...饌前!肉羹還不錯" (回到 user state)
