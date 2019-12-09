@@ -66,12 +66,6 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 				      * State: earn
 				      * Reply: "吃吃吃...饌前!肉羹還不錯" (回到 user state)
 		       * Input: "n"
-		            * State: dumpling
-			    * Reply: "想吃餃子嗎? y/n?"
-			         * Input: "y"
-				      * State: eight_cloud
-				      * Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯" (回到 user state)
-				 * Input: "n"
 				      * State: dance
 				      * Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯" (回到 user state)
 			    
