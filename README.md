@@ -51,8 +51,8 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 
 * user
 	* Input: "eat"
-	        * State: choose
-		* Reply: "要吃長榮路的嗎? y/n?"
+             * State: choose
+	     * Reply: "要吃長榮路的嗎? y/n?"
             * Input: "y"
 	           * State: happy
 		   * Reply: "你今天開心嗎? y/n?"
