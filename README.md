@@ -18,8 +18,14 @@ pip install -r requirements.txt
 ```
 
 * pygraphviz (For visualizing Finite State Machine)
-    * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
-	* [Note: macOS Install error](https://github.com/pygraphviz/pygraphviz/issues/100)
+    * [Setup pygraphviz on Windows]
+      Steps:
+1. Download graphviz-2.38.msi from https://graphviz.gitlab.io/_pages/Download/Download_windows.html and install
+2. Download the 2.7 o̶r̶ ̶3̶.̶4̶ wheel file you need from https://github.com/CristiFati/Prebuilt-Binaries/tree/master/PyGraphviz/v1.5/Graphviz-2.42.2
+3. Navigate to the directory that you downloaded the wheel file to
+4. Run pip install pygraphviz-1.3.1-cp27-none-win_amd64.whl
+5. Rejoice
+	
 
 
 #### Secret Data
@@ -118,7 +124,8 @@ sudo snap install --classic heroku
 [Pipenv](https://medium.com/@chihsuan/pipenv-更簡單-更快速的-python-套件管理工具-135a47e504f4) ❤️ [@chihsuan](https://github.com/chihsuan)
 
 [TOC-Project-2019](https://github.com/winonecheng/TOC-Project-2019) ❤️ [@winonecheng](https://github.com/winonecheng)
-
+[TOCproject2020]
 Flask Architecture ❤️ [@Sirius207](https://github.com/Sirius207)
 
 [Line line-bot-sdk-python](https://github.com/line/line-bot-sdk-python/tree/master/examples/flask-echo)
+[Setup pygraphviz on Windows]https://stackoverflow.com/questions/40809758/howto-install-pygraphviz-on-windows-10-64bit/42059133?fbclid=IwAR3t8ZuzDLIous-i26_gYWEv2Wz-T1RgO2ykTKk7PvmxVvwt-GJ5NnhIj9c
