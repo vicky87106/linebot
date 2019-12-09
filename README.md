@@ -83,8 +83,8 @@ python app.py
 			    * Reply: "想吃餃子嗎? y/n?"
 			         * Input: "y"
 				     * State: eight_cloud    
-				     * Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯" (回到 user state)
-				 * Input: "n"
+				     * Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯" (回到 user state)   
+				 * Input: "n" 
 				      * State: dance    
 				      * Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯" (回到 user state)
 			    
