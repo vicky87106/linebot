@@ -10,6 +10,7 @@ A Line bot based on a finite state machine
 * Pipenv
 * Line developer
 * Heroku
+* Windows 10
 
 #### Install Dependency
 ```sh
