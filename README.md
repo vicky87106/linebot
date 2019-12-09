@@ -21,7 +21,7 @@ pip install -r requirements.txt
     * [Setup pygraphviz on Windows]
       Steps:
 1. Download graphviz-2.38.msi from https://graphviz.gitlab.io/_pages/Download/Download_windows.html and install
-2. Download the 2.7 o̶r̶ ̶3̶.̶4̶ wheel file you need from https://github.com/CristiFati/Prebuilt-Binaries/tree/master/PyGraphviz/v1.5/Graphviz-2.42.2
+2. Download the version of python you need from https://github.com/CristiFati/Prebuilt-Binaries/tree/master/PyGraphviz/v1.5/Graphviz-2.42.2
 3. Navigate to the directory that you downloaded the wheel file to
 4. Run pip install pygraphviz-1.3.1-cp27-none-win_amd64.whl
 5. Rejoice
@@ -50,11 +50,40 @@ The initial state is set to `user`.
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
 
 * user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
+	* Input: "eat"
+	        *State:choose
+		* Reply: "要吃長榮路的嗎? y/n?"
+            *Input: "y"
+	           *State:happy
+		   *Reply: "你今天開心嗎? y/n?"
+	                 *Input: "y"
+			      *State: box
+			      *Reply: "想吃便當類的嗎? y/n?"
+			          *Input: "y"
+				      *State:earn
+				      *Reply: "吃吃吃...饌前!肉羹還不錯"
+				  *Input: "n"
+				       *State:eye
+				       *Reply: "那就吃目白吧!有機會遇到認識的人喔!XD"
+		         *Input:"n"
+			      *State: dance
+			      *Reply: "那去舞春好好吃一波吧!!對面甜點聽說不錯~"
+	    *Input: "n"
+	          *State: rice
+		  *Reply: "想吃飯類的嗎? y/n?"
+		       *Input: "y"
+		            *State: chicken
+			    *Reply: "施家火雞肉飯~傍晚還有麻糬可以買  超好吃!!"
+		       *Input: "n"
+		            *State: dumpling
+			    *Reply: "想吃餃子嗎? y/n?"
+			         *Input: "y"
+				      *State: eight_cloud
+				      *Reply: "吃八方雲集吧~前陣子新出的雞肉鍋貼還不錯~"
+				 *Input: "n"
+				      *State: braised
+				      *Reply: "食神滷味...愛店!! 但晚上才開..人多會等有點久!"
+			    
 
 ## Deploy
 Setting to deploy webhooks on Heroku.
