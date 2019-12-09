@@ -61,7 +61,7 @@ python app.py
    		* State: happy
 		* Reply: "你今天開心嗎? y/n?"
 			* Input: "y"
-		     	* State: box
+			* State: box
 			* Reply: "想吃便當類的嗎? y/n?
 				* Input: "y"
 				* State: eye
