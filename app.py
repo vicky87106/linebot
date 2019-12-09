@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request, abort, send_file
 from dotenv import load_dotenv
 from linebot import LineBotApi, WebhookParser,WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage,StickerMessage,StickerSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 from fsm import TocMachine
 from utils import send_text_message
@@ -38,6 +38,8 @@ machine = TocMachine(
 
 
 app = Flask(__name__, static_url_path="")
+
+
 
 
 # get channel_secret and channel_access_token from your environment variable
@@ -107,7 +109,7 @@ def webhook_handler():
         print(f"REQUEST BODY: \n{body}")
         response = machine.advance(event)
         if response == False:
-            send_text_message(event.reply_token, "Not Entering any State")
+            send_text_message(event.reply_token, "打eat可以開始詢問要吃甚麼\n\n打y或n回答問題\ny表示答案為是\nn表示答案為否")
 
     return "OK"
 
