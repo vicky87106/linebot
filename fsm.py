@@ -80,7 +80,7 @@ class TocMachine(GraphMachine):
     def on_enter_chicken(self,event):
         print("I'm entering chicken")
         reply_token = event.reply_token
-        send_text_message(reply_token, "雙城烤雞飯~真的超好吃~\n特別是雞片飯...不過晚到就沒了喔!\n貼心提醒:只有中午有開喔!!")
+        send_text_message(reply_token, "雙城烤雞飯~真的超好吃~\n特別是雞片飯...不過晚到就沒了喔!\n貼心提醒:只有中午有開喔!!\n\n施家火雞肉飯也不錯，傍晚郵局下的麻糬也很好吃!!")
         self.go_back() #chicken回到user   
 
     def is_going_to_dumpling(self, event): #不要吃飯
