@@ -82,7 +82,7 @@ python app.py
 	         
 			* Input: "y"
 			* State: chicken   
-			* Reply: "施家火雞肉飯~傍晚還有麻糬可以買  超好吃!!" (回到 user state)
+			* Reply: "雙城烤雞飯~真的超好吃 特別是雞片飯...不過晚到就沒了喔! 貼心提醒:只有中午有開喔!!!!" (回到 user state)
 			* Input: "n"
 			* State: dumpling
 			* Reply: "想吃餃子嗎? y/n?"
