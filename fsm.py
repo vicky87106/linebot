@@ -2,7 +2,6 @@ from transitions.extensions import GraphMachine
 
 from utils import send_text_message
 
-
 class TocMachine(GraphMachine):
     def __init__(self, **machine_configs):
         self.machine = GraphMachine(model=self, **machine_configs)
@@ -14,6 +13,7 @@ class TocMachine(GraphMachine):
     def on_enter_choose(self, event):
         print("I'm entering choose")
         reply_token = event.reply_token
+        id = event.source.user_id
         send_text_message(reply_token, "要吃長榮路的嗎? y/n?")
 
     def is_going_to_happy(self, event): #吃長榮路
@@ -80,7 +80,7 @@ class TocMachine(GraphMachine):
     def on_enter_chicken(self,event):
         print("I'm entering chicken")
         reply_token = event.reply_token
-        send_text_message(reply_token, "施家火雞肉飯~傍晚還有麻糬可以買~~超好吃!!")
+        send_text_message(reply_token, "雙城烤雞飯~真的超好吃~\n特別是雞片飯...不過晚到就沒了喔!\n貼心提醒:只有中午有開喔!!")
         self.go_back() #chicken回到user   
 
     def is_going_to_dumpling(self, event): #不要吃飯
@@ -130,4 +130,6 @@ class TocMachine(GraphMachine):
     
     def on_exit_dumpling(self,event):
         print("Leaving dumpling")
+
+    
 
